@@ -63,3 +63,4 @@ elif media >= 5 & media <= 6.9:
     print("Recuperacao!")
 else:
     print("Reprovado!")
+
