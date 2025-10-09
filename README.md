@@ -83,10 +83,10 @@ Este curso tem como missão **capacitar novos desenvolvedores** e promover a **i
 ## 📊 Progresso do Curso
 - Módulo 1 – Introdução ao Python e Lógica de Programação <progress value="100" max="100"></progress>
 - Módulo 2 – Estruturas de Dados em Python <progress value="0" max="100"></progress> 
-- Módulo 3 – Funções, Módulos e Pacotes <progress value="0" max="100"></progress>  
+- Módulo 3 – Funções, Módulos e Pacotes <progress value="5" max="100"></progress>  
 - Módulo 4 – Manipulação de Arquivos e Exceções <progress value="0" max="100"></progress>   
 - Módulo 5 – Programação Orientada a Objetos (POO) <progress value="0" max="100"></progress>  
-- Módulo 6 – Bibliotecas e Ferramentas do Python <progress value="0" max="100"></progress>  
+- Módulo 6 – Bibliotecas e Ferramentas do Python <progress value="10" max="100"></progress>  
 - Módulo 7 – Projetos Práticos <progress value="0" max="100"></progress>  
 
 ## 🗂 Estrutura do Repositório  
