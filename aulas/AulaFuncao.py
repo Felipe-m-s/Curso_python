@@ -99,3 +99,20 @@ while True:
         case _:
             print("Opção invalida")
             continue
+
+
+#* ----------------- Lambda -----------------
+
+#Sem lambda
+def dobro (x_parm):
+    return x_parm * 2
+
+print(dobro(4))
+
+#Com lambda
+dobroV = lambda x: x*2
+print(dobro(4))
+
+# ou
+
+print((lambda x: x*2)(4))
