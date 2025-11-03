@@ -158,6 +158,7 @@ concatenacao = reduce (lambda x, y: x + y, palavras)
 print(concatenacao)
 
 #* ----------------- List Comprhession -----------------
+#Sem list comprhession
 quadrados = []
 for i in range(1, 6):
     quadrados.append(i ** 2)
@@ -168,4 +169,19 @@ for i in range(1, 6):
     quadrados_pares.append(i ** 2) if i%2 == 0 else None
 
 print(quadrados_pares)
+
+#Com list comprhession
+quadrados = [i ** 2 for i in range(1, 6)]
+print(quadrados)
+
+quadrados_pares = [i ** 2 for i in range(1, 6) if i % 2 == 0]
+print(quadrados_pares)
+
+#Extra
+quadrados_pares_maior_que_3 = [i for i in range(1, 6) if i % 2 == 0 and i > 3]
+print(quadrados_pares_maior_que_3)
+
+num = [1, 2, 3, 4, 5, 6, 7, 8]
+resultado = [i for i in num if i < 3 or i > 10]
+print(resultado)
 
