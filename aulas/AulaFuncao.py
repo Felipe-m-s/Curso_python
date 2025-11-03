@@ -116,3 +116,56 @@ print(dobro(4))
 # ou
 
 print((lambda x: x*2)(4))
+
+#* -----------------Map com Lambda -----------------
+#Sem map
+numeros = [1, 2, 3]
+quadrados = []
+
+for x in numeros:
+    quadrados.append(x ** 2)
+print(quadrados)
+
+#Com map
+quadrados = list(map(lambda x: x ** 2, numeros))
+print(quadrados)
+
+
+#* ----------------- Filter com Lambda -----------------
+#Sem filter 
+nuns = [1, 8, 3, 10, 5]
+pares = []
+
+for num in nuns:
+    if num % 2 == 0:
+        pares.append(num)
+print(pares)
+
+#Com filter
+pares = list(filter(lambda x: x % 2 == 0, nuns))
+print(pares)
+
+
+#* ----------------- Reduce com Lambda -----------------
+#importando a função reduce  do módulo functools
+from functools import reduce
+
+vec_nuns = [1, 2, 3]
+palavras = ['Phy','ton', ' ', 'é legal']
+soma_total = reduce(lambda x, y: x + y, vec_nuns)
+print(soma_total)
+concatenacao = reduce (lambda x, y: x + y, palavras)
+print(concatenacao)
+
+#* ----------------- List Comprhession -----------------
+quadrados = []
+for i in range(1, 6):
+    quadrados.append(i ** 2)
+print(quadrados)
+
+quadrados_pares = []
+for i in range(1, 6):
+    quadrados_pares.append(i ** 2) if i%2 == 0 else None
+
+print(quadrados_pares)
+
