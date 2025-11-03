@@ -185,3 +185,38 @@ num = [1, 2, 3, 4, 5, 6, 7, 8]
 resultado = [i for i in num if i < 3 or i > 10]
 print(resultado)
 
+#* ----------------- STRINGS -----------------
+texto = "Python é show"
+
+#strip
+texto.strip()
+print(texto)
+
+#lower()
+print(texto.lower())
+
+#upper()
+print(texto.upper())
+
+#split
+print(texto.split())
+
+#join
+palavras = ["Boa", "Noite", "Pessoal"]
+print(" ".join(palavras))
+
+#replace
+print(texto.replace("show", "demais"))
+
+#find
+print(texto.find("show"))
+
+#.format
+nome = "Felipe"
+idade = 19
+msg = "Meu nome é {} e tenho {} anos.".format(nome, idade)
+print(msg)
+
+#f-strings
+msg2 = f"Meu nome é {nome} e tenho {idade} anos."
+print(msg2)
