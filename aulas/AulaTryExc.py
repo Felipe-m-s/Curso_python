@@ -29,3 +29,16 @@ try:
     print("Resultado:", resultado)
 except ValueError as e:
     print("Erro:", e)
+
+#* Implementando Else e Finally
+try:
+    a = int(input("Digite o numerador: "))
+    b = int(input("Digite o denominador: "))
+    resultado = a/b
+except ZeroDivisionError:
+    print("Não é possível dividir por zero.")
+else:
+    print("Divisão realizada com sucesso.")
+    print("O resultado é:", resultado)
+finally: #Sempre será exibibido, apesar de erros ou não
+    print("Fim do programa.")
