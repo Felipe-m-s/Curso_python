@@ -8,3 +8,24 @@ except ZeroDivisionError:
     print("Não é possível dividir por zero.")
 except Exception as e:
     print("Ocorreu um erro:", e)
+
+#* Usando Raise
+idade = int(input("Digite sua idade: "))
+if idade < 0:
+    raise ValueError("Idade não pode ser negativa.")
+else:
+    print("Sua idade é:", idade)
+
+#todo Exercicio de fixação
+def dividir(a_param, b_param):
+    if b_param == 0:
+        raise ValueError("O divisor não pode ser zero.")
+    return a_param / b_param
+
+try:
+    a = int(input("Digite o numerador: "))
+    b = int(input("Digite o denominador: "))
+    resultado = dividir(a, b)
+    print("Resultado:", resultado)
+except ValueError as e:
+    print("Erro:", e)
