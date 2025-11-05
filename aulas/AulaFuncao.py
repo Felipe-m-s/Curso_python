@@ -116,3 +116,107 @@ print(dobro(4))
 # ou
 
 print((lambda x: x*2)(4))
+
+#* -----------------Map com Lambda -----------------
+#Sem map
+numeros = [1, 2, 3]
+quadrados = []
+
+for x in numeros:
+    quadrados.append(x ** 2)
+print(quadrados)
+
+#Com map
+quadrados = list(map(lambda x: x ** 2, numeros))
+print(quadrados)
+
+
+#* ----------------- Filter com Lambda -----------------
+#Sem filter 
+nuns = [1, 8, 3, 10, 5]
+pares = []
+
+for num in nuns:
+    if num % 2 == 0:
+        pares.append(num)
+print(pares)
+
+#Com filter
+pares = list(filter(lambda x: x % 2 == 0, nuns))
+print(pares)
+
+
+#* ----------------- Reduce com Lambda -----------------
+#importando a função reduce  do módulo functools
+from functools import reduce
+
+vec_nuns = [1, 2, 3]
+palavras = ['Phy','ton', ' ', 'é legal']
+soma_total = reduce(lambda x, y: x + y, vec_nuns)
+print(soma_total)
+concatenacao = reduce (lambda x, y: x + y, palavras)
+print(concatenacao)
+
+#* ----------------- List Comprhession -----------------
+#Sem list comprhession
+quadrados = []
+for i in range(1, 6):
+    quadrados.append(i ** 2)
+print(quadrados)
+
+quadrados_pares = []
+for i in range(1, 6):
+    quadrados_pares.append(i ** 2) if i%2 == 0 else None
+
+print(quadrados_pares)
+
+#Com list comprhession
+quadrados = [i ** 2 for i in range(1, 6)]
+print(quadrados)
+
+quadrados_pares = [i ** 2 for i in range(1, 6) if i % 2 == 0]
+print(quadrados_pares)
+
+#Extra
+quadrados_pares_maior_que_3 = [i for i in range(1, 6) if i % 2 == 0 and i > 3]
+print(quadrados_pares_maior_que_3)
+
+num = [1, 2, 3, 4, 5, 6, 7, 8]
+resultado = [i for i in num if i < 3 or i > 10]
+print(resultado)
+
+#* ----------------- STRINGS -----------------
+texto = "Python é show"
+
+#strip
+texto.strip()
+print(texto)
+
+#lower()
+print(texto.lower())
+
+#upper()
+print(texto.upper())
+
+#split
+print(texto.split())
+
+#join
+palavras = ["Boa", "Noite", "Pessoal"]
+print(" ".join(palavras))
+
+#replace
+print(texto.replace("show", "demais"))
+
+#find
+print(texto.find("show"))
+
+#.format
+nome = "Felipe"
+idade = 19
+msg = "Meu nome é {} e tenho {} anos.".format(nome, idade)
+print(msg)
+
+#f-strings
+msg2 = f"Meu nome é {nome} e tenho {idade} anos."
+print(msg2)
