@@ -35,21 +35,66 @@ def abrirArquivo(nome_arquivo_param):
 nome_arquivo = input("Digite o nome do arquivo: ")
 abrirArquivo(nome_arquivo)
 
-#* 10. Quadrado dos números de uma lista
+#* 10. Raiz quadrada segura
 print("\n", "-" * 30, "Atvidade 10", "-" * 30)
-#* 11. Quadrado dos números de uma lista
+def calcular_raiz_segura():
+    try:
+        entrada = input("Digite um número para calcular a raiz quadrada: ")
+        numero = float(entrada)
+        
+        if numero < 0:
+            raise ValueError("ERRO: Não é possível calcular a raiz quadrada de um número negativo).")
+        
+        raiz = numero**0.5
+        print(f"\nA raiz quadrada de {numero} é: {raiz}")
+
+    except ValueError as e:
+        
+        print(f"\nOcorreu um erro de valor: {e}")
+        print("Por favor, certifique-se de digitar um número válido e não-negativo.")
+    
+    except Exception as e:
+        print(f"\nUm erro inesperado ocorreu: {e}")
+
+calcular_raiz_segura()
+
+#* 11. Cadastro com validação de idade e nota
 print("\n", "-" * 30, "Atvidade 11", "-" * 30)
-#* 12. Quadrado dos números de uma lista
+def cadastrarAluno ():
+    nome = input("Digite o nome do aluno: ")
+    try:
+        idade = input("Idade: ")
+        idade = float(idade)
+    except ValueError:
+        print("Digite uma idade válida!")
+        return
+        
+    
+    try:
+        nota = input("Nota Final: ")
+        nota = float(nota)
+        
+        if nota < 0 or nota > 10:
+            raise ValueError("Digite notas de 0 a 10")
+    except ValueError:
+        print("Digite uma nota válida")
+        return
+    
+    print(f"Aluno cadastrado com sucesso!\nNome: {nome}\nIdade: {idade}\nNota final: {nota}")
+
+cadastrarAluno()
+
+#* 12. Soma com bloco finally
 print("\n", "-" * 30, "Atvidade 12", "-" * 30)
-#* 13. Quadrado dos números de uma lista
-print("\n", "-" * 30, "Atvidade 13", "-" * 30)
-#* 14. Quadrado dos números de uma lista
-print("\n", "-" * 30, "Atvidade 14", "-" * 30)
-#* 15. Quadrado dos números de uma lista
-print("\n", "-" * 30, "Atvidade 15", "-" * 30)
-#* 16. Quadrado dos números de uma lista
-print("\n", "-" * 30, "Atvidade 16", "-" * 30)
-#* 17. Quadrado dos números de uma lista
-print("\n", "-" * 30, "Atvidade 17", "-" * 30)
-#* 18. Quadrado dos números de uma lista
-print("\n", "-" * 30, "Atvidade 18", "-" * 30)
+def SomaFinally ():
+    try:
+        num1 = int(input("Digite o primeiro número: "))
+        num2 = int(input("Digite o segundo número: "))
+        
+        print(f"Soma: {num1+num2}")
+    except ValueError:
+        print("Digite somente números")
+    finally:
+        print("Operação concluída")
+
+SomaFinally()
